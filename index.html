@@ -8,7 +8,7 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
   <!-- CSS -->
   <link rel="stylesheet" href="Home.css" />
@@ -20,25 +20,29 @@
   <header class="header">
     <nav class="navbar container">
       <div class="navbar__logo">
-        <img src="logo.png" alt="Elegance Dental Lab Logo" class="logo-img" />
+        <img src="logo.png" alt="Elegance Dental Lab Logo" class="logo-img" data-i18n-alt="logo.alt" />
         <span>Elegance Dental Lab</span>
       </div>
 
       <!-- Desktop Links -->
       <ul class="navbar__links" id="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#features">Features</a></li>
-        <li><a href="#pricing">Price List</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#home" data-i18n="nav.home">Home</a></li>
+        <li><a href="#features" data-i18n="nav.features">Features</a></li>
+        <li><a href="#pricing" data-i18n="nav.pricing">Price List</a></li>
+        <li><a href="#about" data-i18n="nav.about">About</a></li>
+        <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
       </ul>
 
-      <!-- Mobile Menu Icon -->
-      <button class="menu-btn" id="menu-btn" aria-label="Toggle Menu">
-        <span class="menu-btn__line"></span>
-        <span class="menu-btn__line"></span>
-        <span class="menu-btn__line"></span>
-      </button>
+      <div class="navbar__actions">
+        <button type="button" class="lang-switch" id="lang-switch">العربية</button>
+
+        <!-- Mobile Menu Icon -->
+        <button class="menu-btn" id="menu-btn" data-i18n-aria="nav.menu" aria-label="Toggle Menu">
+          <span class="menu-btn__line"></span>
+          <span class="menu-btn__line"></span>
+          <span class="menu-btn__line"></span>
+        </button>
+      </div>
     </nav>
   </header>
 
@@ -46,24 +50,24 @@
   <section class="hero" id="home">
     <div class="container hero__content">
       <div class="hero__text">
-        <h1>Premium Dental Lab Solutions for Your Clinic</h1>
-        <p>
+        <h1 data-i18n="hero.title">Premium Dental Lab Solutions for Your Clinic</h1>
+        <p data-i18n="hero.subtitle">
           High-precision crowns, bridges, implants, and removable prosthetics
           with reliable turnaround times and consistent quality.
         </p>
         <div class="hero__actions">
-          <a href="#pricing" class="btn">View Products</a>
-          <a href="#contact" class="btn btn-outline">Contact Us</a>
+          <a href="#pricing" class="btn" data-i18n="hero.products">View Products</a>
+          <a href="#contact" class="btn btn-outline" data-i18n="hero.contact">Contact Us</a>
         </div>
         <div class="hero__tags">
-          <span>Digital Workflow</span>
-          <span>Fast Turnaround</span>
-          <span>Certified Technicians</span>
+          <span data-i18n="hero.tag1">Digital Workflow</span>
+          <span data-i18n="hero.tag2">Fast Turnaround</span>
+          <span data-i18n="hero.tag3">Certified Technicians</span>
         </div>
       </div>
 
       <div class="hero__image">
-        <img src="IMG_3064.PNG" alt="Dental Lab" />
+        <img src="IMG_3064.PNG" alt="Dental Lab" data-i18n-alt="hero.imageAlt" />
       </div>
     </div>
   </section>
@@ -72,8 +76,8 @@
   <section class="section section-alt" id="features">
     <div class="container">
       <div class="section__header">
-        <h2>Why Clinics Work With Us</h2>
-        <p>Clear standards for materials, fit, and follow-up on every case.</p>
+        <h2 data-i18n="features.title">Why Clinics Work With Us</h2>
+        <p data-i18n="features.subtitle">Clear standards for materials, fit, and follow-up on every case.</p>
       </div>
 
       <div class="grid features-grid">
@@ -83,8 +87,8 @@
               <path d="M12 3l2.2 4.6L19 8.2l-3.5 3.4.8 4.9L12 14.8 7.7 16.5l.8-4.9L5 8.2l4.8-.6L12 3z"/>
             </svg>
           </div>
-          <h3>Premium Quality Materials</h3>
-          <p>High-end materials chosen for strength, shade stability, and reliable clinical results.</p>
+          <h3 data-i18n="features.materials.title">Premium Quality Materials</h3>
+          <p data-i18n="features.materials.text">High-end materials chosen for strength, shade stability, and reliable clinical results.</p>
         </div>
 
         <div class="card feature-card">
@@ -95,8 +99,8 @@
               <path d="M12 2v3M12 19v3M2 12h3M19 12h3"/>
             </svg>
           </div>
-          <h3>High Precision &amp; Accuracy</h3>
-          <p>Restorations planned for a precise fit and a natural aesthetic outcome.</p>
+          <h3 data-i18n="features.precision.title">High Precision &amp; Accuracy</h3>
+          <p data-i18n="features.precision.text">Restorations planned for a precise fit and a natural aesthetic outcome.</p>
         </div>
 
         <div class="card feature-card">
@@ -106,8 +110,8 @@
               <path d="M9 12l2 2 4-4"/>
             </svg>
           </div>
-          <h3>Free Remake Guarantee</h3>
-          <p>If a case does not fit, we remake it at no charge.</p>
+          <h3 data-i18n="features.remake.title">Free Remake Guarantee</h3>
+          <p data-i18n="features.remake.text">If a case does not fit, we remake it at no charge.</p>
         </div>
 
         <div class="card feature-card">
@@ -117,8 +121,8 @@
               <circle cx="12" cy="12" r="2.5"/>
             </svg>
           </div>
-          <h3>Free Try-In</h3>
-          <p>A try-in is included before the final glaze, so fit and shade can be confirmed first.</p>
+          <h3 data-i18n="features.tryin.title">Free Try-In</h3>
+          <p data-i18n="features.tryin.text">A try-in is included before the final glaze, so fit and shade can be confirmed first.</p>
         </div>
 
         <div class="card feature-card">
@@ -130,8 +134,8 @@
               <circle cx="17" cy="17.5" r="1.5"/>
             </svg>
           </div>
-          <h3>Courier Delivery Service</h3>
-          <p>Pickup from your clinic and delivery of the finished case back to you.</p>
+          <h3 data-i18n="features.courier.title">Courier Delivery Service</h3>
+          <p data-i18n="features.courier.text">Pickup from your clinic and delivery of the finished case back to you.</p>
         </div>
 
         <div class="card feature-card">
@@ -141,8 +145,8 @@
               <path d="M8 8h8M8 12h8M8 16h5"/>
             </svg>
           </div>
-          <h3>Doctor Tracking System</h3>
-          <p>A system for doctors to follow each case from receipt through delivery.</p>
+          <h3 data-i18n="features.tracking.title">Doctor Tracking System</h3>
+          <p data-i18n="features.tracking.text">A system for doctors to follow each case from receipt through delivery.</p>
         </div>
 
         <div class="card feature-card">
@@ -152,8 +156,8 @@
               <path d="M12 8v4l3 2"/>
             </svg>
           </div>
-          <h3>24/7 Service</h3>
-          <p>The lab works around the clock, including holidays.</p>
+          <h3 data-i18n="features.hours.title">24/7 Service</h3>
+          <p data-i18n="features.hours.text">The lab works around the clock, including holidays.</p>
         </div>
       </div>
     </div>
@@ -163,46 +167,46 @@
   <section class="section" id="services">
     <div class="container">
       <div class="section__header">
-        <h2>Our Services</h2>
-        <p>Complete solutions for fixed, removable, and implant dentistry.</p>
+        <h2 data-i18n="services.title">Our Services</h2>
+        <p data-i18n="services.subtitle">Complete solutions for fixed, removable, and implant dentistry.</p>
       </div>
       <div class="grid grid-3">
         <div class="card service-card">
-          <h3>Crowns & Bridges</h3>
-          <p>
+          <h3 data-i18n="services.crowns.title">Crowns & Bridges</h3>
+          <p data-i18n="services.crowns.text">
             Zirconia, E-max, and metal-ceramic restorations with natural
             aesthetics and strong durability.
           </p>
           <ul>
-            <li>Full contour zirconia</li>
-            <li>Layered zirconia</li>
-            <li>E-max veneers & crowns</li>
+            <li data-i18n="services.crowns.1">Full contour zirconia</li>
+            <li data-i18n="services.crowns.2">Layered zirconia</li>
+            <li data-i18n="services.crowns.3">E-max veneers & crowns</li>
           </ul>
         </div>
 
         <div class="card service-card">
-          <h3>Implant Restorations</h3>
-          <p>
+          <h3 data-i18n="services.implants.title">Implant Restorations</h3>
+          <p data-i18n="services.implants.text">
             Custom abutments and implant-supported crowns for different systems
             with precise fit.
           </p>
           <ul>
-            <li>Custom abutments</li>
-            <li>Screw-retained crowns</li>
-            <li>Multi-unit restorations</li>
+            <li data-i18n="services.implants.1">Custom abutments</li>
+            <li data-i18n="services.implants.2">Screw-retained crowns</li>
+            <li data-i18n="services.implants.3">Multi-unit restorations</li>
           </ul>
         </div>
 
         <div class="card service-card">
-          <h3>Removable Prosthetics</h3>
-          <p>
+          <h3 data-i18n="services.removable.title">Removable Prosthetics</h3>
+          <p data-i18n="services.removable.text">
             High-quality partial and complete dentures with comfortable fit and
             stable function.
           </p>
           <ul>
-            <li>Complete dentures</li>
-            <li>Cast partial dentures</li>
-            <li>Flexible dentures</li>
+            <li data-i18n="services.removable.1">Complete dentures</li>
+            <li data-i18n="services.removable.2">Cast partial dentures</li>
+            <li data-i18n="services.removable.3">Flexible dentures</li>
           </ul>
         </div>
       </div>
@@ -214,78 +218,73 @@
   <section class="section" id="pricing">
     <div class="container">
       <div class="section__header">
-        <h2>Price List</h2>
-        <p>Transparent pricing with consistent quality and service.</p>
+        <h2 data-i18n="price.title">Price List</h2>
+        <p data-i18n="price.subtitle">Transparent pricing with consistent quality and service.</p>
       </div>
 
       <div class="card pricing-table-wrapper">
         <table class="pricing-table">
           <thead>
             <tr>
-              <th>Service</th>
-              <th>Material</th>
-              <th>Price (EGP)</th>
-              <th>Delivery Time</th>
+              <th data-i18n="price.service">Service</th>
+              <th data-i18n="price.material">Material</th>
+              <th data-i18n="price.amount">Price (EGP)</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>Per Unit</td>
-              <td>Chinese Zirconia</td>
-              <td>600</td>
-              <td>3–4 days</td>
+              <td data-i18n="price.unit">Per Unit</td>
+              <td data-i18n="price.chinese">Chinese Zirconia</td>
+              <td>700</td>
             </tr>
             <tr>
-              <td>Per Unit</td>
-              <td>German Zirconia</td>
-              <td>750</td>
-              <td>3–4 days</td>
+              <td data-i18n="price.unit">Per Unit</td>
+              <td data-i18n="price.german">German Zirconia</td>
+              <td>850</td>
             </tr>
             <tr>
-              <td>Per Unit</td>
-              <td>Emax Crown</td>
-              <td>900</td>
-              <td>3–4 days</td>
+              <td data-i18n="price.unit">Per Unit</td>
+              <td data-i18n="price.emax">Emax Crown</td>
+              <td>1000</td>
             </tr>
             <tr>
-              <td>Per Unit</td>
-              <td>Veneer</td>
-              <td>900</td>
-              <td>3–4 days</td>
+              <td data-i18n="price.unit">Per Unit</td>
+              <td data-i18n="price.veneer">Veneer</td>
+              <td>1000</td>
             </tr>
             <tr>
-              <td>Per Unit</td>
-              <td>PEEK ( inclouding zirconia )</td>
-              <td>1500</td>
-              <td>5–7 days</td>
+              <td data-i18n="price.unit">Per Unit</td>
+              <td data-i18n="price.peek">PEEK (including zirconia)</td>
+              <td>1700</td>
             </tr>
             <tr>
-              <td>Per Unit</td>
-              <td>Titanium ( inclouding zirconia )</td>
-              <td>2000</td>
-              <td>5–7 days</td>
+              <td data-i18n="price.unit">Per Unit</td>
+              <td data-i18n="price.titanium">Titanium (including zirconia)</td>
+              <td>2200</td>
             </tr>
             <tr>
-              <td>Per Unit</td>
-              <td>Night Guard</td>
+              <td data-i18n="price.unit">Per Unit</td>
+              <td data-i18n="price.night">Night Guard</td>
+              <td>300</td>
+            </tr>
+            <tr>
+              <td data-i18n="price.unit">Per Unit</td>
+              <td data-i18n="price.mockup">Dental Mockup</td>
               <td>250</td>
-              <td>1-2 days</td>
             </tr>
             <tr>
-              <td>Per Unit</td>
-              <td>Dental Mockup</td>
-              <td>500</td>
-              <td>1-2 days</td>
-            </tr>
-            <tr>
-              <td>Per Unit</td>
-              <td>PMMA</td>
+              <td data-i18n="price.unit">Per Unit</td>
+              <td data-i18n="price.pmma">PMMA</td>
               <td>100</td>
-              <td>1-2 days</td>
+            </tr>
+            <tr>
+              <td data-i18n="price.unit">Per Unit</td>
+              <td data-i18n="price.pmmaCad">PMMA Cad</td>
+              <td>250</td>
             </tr>
           </tbody>
         </table>
-        <p class="pricing-note">
+        <p class="pricing-note" data-i18n="price.note">
           * Prices may vary based on case complexity. Please contact us for a
           detailed quotation.
         </p>
@@ -297,23 +296,23 @@
   <section class="section section-alt" id="locations">
     <div class="container">
       <div class="section__header">
-        <h2>Our Locations</h2>
-        <p>Easy access for clinics and doctors across the city.</p>
+        <h2 data-i18n="locations.title">Our Locations</h2>
+        <p data-i18n="locations.subtitle">Easy access for clinics and doctors across the city.</p>
       </div>
 
       
         <div class="card location-card">
           <div class="contact-container">
 
-              <p>Location:
+              <p><span data-i18n="locations.locationLabel">Location:</span>
                <a href="http://maps.app.goo.gl/XGmoxYmLNetBtTCD8" class="location-link" target="_blank">
-                 📍 Location
+                 <span data-i18n="locations.locationLink">📍 Location</span>
                </a>
               </p>
 
 
           </div>
-          <p class="location-card__phone">Phone: +20 155 158 03 64</p>
+          <p class="location-card__phone"><span data-i18n="locations.phoneLabel">Phone:</span> +20 155 158 03 64</p>
         </div>
         
       </div>
@@ -324,21 +323,21 @@
   <section class="section" id="about">
     <div class="container about">
       <div class="about__text">
-        <h2>About Elegance Dental Lab</h2>
-        <p>
+        <h2 data-i18n="about.title">About Elegance Dental Lab</h2>
+        <p data-i18n="about.p1">
           Elegance Dental Lab is a full-service laboratory providing fixed and
           removable restorations for dental clinics. We combine digital
           workflows with experienced technicians to deliver precise and
           aesthetic results.
         </p>
-        <p>
+        <p data-i18n="about.p2">
           Our lab focuses on consistent quality, clear communication, and
           reliable turnaround times to support your clinical practice.
         </p>
         <ul class="about__list">
-          <li>More than 25 years of experience</li>
-          <li>Digital design & milling</li>
-          <li>Strict quality control for every case</li>
+          <li data-i18n="about.1">More than 25 years of experience</li>
+          <li data-i18n="about.2">Digital design & milling</li>
+          <li data-i18n="about.3">Strict quality control for every case</li>
         </ul>
       </div>
     </div>
@@ -348,27 +347,27 @@
   <section class="section section-alt" id="contact">
     <div class="container">
       <div class="section__header">
-        <h2>Contact</h2>
-        <p>Get in touch with us for any inquiries or case details.</p>
+        <h2 data-i18n="contact.title">Contact</h2>
+        <p data-i18n="contact.subtitle">Get in touch with us for any inquiries or case details.</p>
       </div>
 
       <div class="grid grid-2 contact-grid">
         <div class="card contact-info">
-          <h3>Contact Details</h3>
-          <p><strong>Phone:</strong> +20 100 629 5624</p>
-          <p><strong>WhatsApp:</strong> +20 155 158 0543</p>
-          <p><strong>Working Hours:</strong> All Day, 12:00 AM – 12:00 PM</p>
-          <a href="https://wa.me/201551580364" class="btn btn-outline contact-whatsapp" target="_blank">
+          <h3 data-i18n="contact.details">Contact Details</h3>
+          <p><strong data-i18n="contact.phone">Phone:</strong> +20 100 629 5624</p>
+          <p><strong data-i18n="contact.whatsapp">WhatsApp:</strong> +20 155 158 0543</p>
+          <p><strong data-i18n="contact.hours">Working Hours:</strong> <span data-i18n="contact.hoursValue">All Day, 12:00 AM – 12:00 PM</span></p>
+          <a href="https://wa.me/201551580364" class="btn btn-outline contact-whatsapp" target="_blank" data-i18n="contact.whatsappBtn">
             Message on WhatsApp
           </a>
         </div>
 
         <div class="card contact-info">
-          <h3>Social Media</h3>
-          <p>Follow us for updates, cases, and new materials.</p>
-          <p><strong>Facebook:</strong> @EleganceDentalLab</p>
-          <p><strong>Instagram:</strong> @elegancedentallab</p>
-          <p><strong>Tik Tok:</strong> @elegancedentallab</p>
+          <h3 data-i18n="contact.social">Social Media</h3>
+          <p data-i18n="contact.socialText">Follow us for updates, cases, and new materials.</p>
+          <p><strong data-i18n="contact.facebook">Facebook:</strong> @EleganceDentalLab</p>
+          <p><strong data-i18n="contact.instagram">Instagram:</strong> @elegancedentallab</p>
+          <p><strong data-i18n="contact.tiktok">Tik Tok:</strong> @elegancedentallab</p>
         </div>
       </div>
     </div>
@@ -377,19 +376,249 @@
   <!-- Footer -->
   <footer class="footer">
     <div class="container footer__content">
-      <p>&copy; 2025 Elegance Dental Lab. All rights reserved.</p>
-      <p class="footer__small">Professional dental laboratory for clinics and dentists.</p>
+      <p>&copy; 2025 Elegance Dental Lab. <span data-i18n="footer.rights">All rights reserved.</span></p>
+      <p class="footer__small" data-i18n="footer.tagline">Professional dental laboratory for clinics and dentists.</p>
     </div>
   </footer>
 
   <script>
+    const translations = {
+      en: {
+        "meta.title": "Elegance Dental Lab",
+        "nav.home": "Home",
+        "nav.features": "Features",
+        "nav.pricing": "Price List",
+        "nav.about": "About",
+        "nav.contact": "Contact",
+        "nav.menu": "Toggle Menu",
+        "logo.alt": "Elegance Dental Lab Logo",
+        "hero.title": "Premium Dental Lab Solutions for Your Clinic",
+        "hero.subtitle": "High-precision crowns, bridges, implants, and removable prosthetics with reliable turnaround times and consistent quality.",
+        "hero.products": "View Products",
+        "hero.contact": "Contact Us",
+        "hero.tag1": "Digital Workflow",
+        "hero.tag2": "Fast Turnaround",
+        "hero.tag3": "Certified Technicians",
+        "hero.imageAlt": "Dental Lab",
+        "features.title": "Why Clinics Work With Us",
+        "features.subtitle": "Clear standards for materials, fit, and follow-up on every case.",
+        "features.materials.title": "Premium Quality Materials",
+        "features.materials.text": "High-end materials chosen for strength, shade stability, and reliable clinical results.",
+        "features.precision.title": "High Precision & Accuracy",
+        "features.precision.text": "Restorations planned for a precise fit and a natural aesthetic outcome.",
+        "features.remake.title": "Free Remake Guarantee",
+        "features.remake.text": "If a case does not fit, we remake it at no charge.",
+        "features.tryin.title": "Free Try-In",
+        "features.tryin.text": "A try-in is included before the final glaze, so fit and shade can be confirmed first.",
+        "features.courier.title": "Courier Delivery Service",
+        "features.courier.text": "Pickup from your clinic and delivery of the finished case back to you.",
+        "features.tracking.title": "Doctor Tracking System",
+        "features.tracking.text": "A system for doctors to follow each case from receipt through delivery.",
+        "features.hours.title": "24/7 Service",
+        "features.hours.text": "The lab works around the clock, including holidays.",
+        "services.title": "Our Services",
+        "services.subtitle": "Complete solutions for fixed, removable, and implant dentistry.",
+        "services.crowns.title": "Crowns & Bridges",
+        "services.crowns.text": "Zirconia, E-max, and metal-ceramic restorations with natural aesthetics and strong durability.",
+        "services.crowns.1": "Full contour zirconia",
+        "services.crowns.2": "Layered zirconia",
+        "services.crowns.3": "E-max veneers & crowns",
+        "services.implants.title": "Implant Restorations",
+        "services.implants.text": "Custom abutments and implant-supported crowns for different systems with precise fit.",
+        "services.implants.1": "Custom abutments",
+        "services.implants.2": "Screw-retained crowns",
+        "services.implants.3": "Multi-unit restorations",
+        "services.removable.title": "Removable Prosthetics",
+        "services.removable.text": "High-quality partial and complete dentures with comfortable fit and stable function.",
+        "services.removable.1": "Complete dentures",
+        "services.removable.2": "Cast partial dentures",
+        "services.removable.3": "Flexible dentures",
+        "price.title": "Price List",
+        "price.subtitle": "Transparent pricing with consistent quality and service.",
+        "price.service": "Service",
+        "price.material": "Material",
+        "price.amount": "Price (EGP)",
+        "price.unit": "Per Unit",
+        "price.chinese": "Chinese Zirconia",
+        "price.german": "German Zirconia",
+        "price.emax": "Emax Crown",
+        "price.veneer": "Veneer",
+        "price.peek": "PEEK (including zirconia)",
+        "price.titanium": "Titanium (including zirconia)",
+        "price.night": "Night Guard",
+        "price.mockup": "Dental Mockup",
+        "price.pmma": "PMMA",
+        "price.pmmaCad": "PMMA Cad",
+        "price.note": "* Prices may vary based on case complexity. Please contact us for a detailed quotation.",
+        "locations.title": "Our Locations",
+        "locations.subtitle": "Easy access for clinics and doctors across the city.",
+        "locations.locationLabel": "Location:",
+        "locations.locationLink": "📍 Location",
+        "locations.phoneLabel": "Phone:",
+        "about.title": "About Elegance Dental Lab",
+        "about.p1": "Elegance Dental Lab is a full-service laboratory providing fixed and removable restorations for dental clinics. We combine digital workflows with experienced technicians to deliver precise and aesthetic results.",
+        "about.p2": "Our lab focuses on consistent quality, clear communication, and reliable turnaround times to support your clinical practice.",
+        "about.1": "More than 25 years of experience",
+        "about.2": "Digital design & milling",
+        "about.3": "Strict quality control for every case",
+        "contact.title": "Contact",
+        "contact.subtitle": "Get in touch with us for any inquiries or case details.",
+        "contact.details": "Contact Details",
+        "contact.phone": "Phone:",
+        "contact.whatsapp": "WhatsApp:",
+        "contact.hours": "Working Hours:",
+        "contact.hoursValue": "All Day, 12:00 AM – 12:00 PM",
+        "contact.whatsappBtn": "Message on WhatsApp",
+        "contact.social": "Social Media",
+        "contact.socialText": "Follow us for updates, cases, and new materials.",
+        "contact.facebook": "Facebook:",
+        "contact.instagram": "Instagram:",
+        "contact.tiktok": "Tik Tok:",
+        "footer.rights": "All rights reserved.",
+        "footer.tagline": "Professional dental laboratory for clinics and dentists."
+      },
+      ar: {
+        "meta.title": "إليجانس دينتال لاب",
+        "nav.home": "الرئيسية",
+        "nav.features": "المميزات",
+        "nav.pricing": "قائمة الأسعار",
+        "nav.about": "من نحن",
+        "nav.contact": "تواصل",
+        "nav.menu": "فتح القائمة",
+        "logo.alt": "شعار إليجانس دينتال لاب",
+        "hero.title": "حلول معمل أسنان متميزة لعيادتك",
+        "hero.subtitle": "تيجان وجسور وزراعات وتركيبات متحركة بدقة عالية، مع جودة ثابتة وتسليم يمكن الاعتماد عليه.",
+        "hero.products": "عرض المنتجات",
+        "hero.contact": "تواصل معنا",
+        "hero.tag1": "سير عمل رقمي",
+        "hero.tag2": "تسليم سريع",
+        "hero.tag3": "فنيون معتمدون",
+        "hero.imageAlt": "معمل الأسنان",
+        "features.title": "لماذا تتعامل العيادات معنا",
+        "features.subtitle": "معايير واضحة للخامات والمقاس والمتابعة في كل حالة.",
+        "features.materials.title": "خامات بجودة عالية",
+        "features.materials.text": "نستخدم خامات عالية المستوى مختارة للمتانة وثبات اللون ونتيجة سريرية موثوقة.",
+        "features.precision.title": "دقة ومقاس مضبوط",
+        "features.precision.text": "كل تركيبة تُجهَّز لتناسب دقيق ومظهر جمالي طبيعي.",
+        "features.remake.title": "ضمان إعادة مجاني",
+        "features.remake.text": "إذا لم تناسب الحالة، نعيد تنفيذها بدون تكلفة.",
+        "features.tryin.title": "تجربة مجانية",
+        "features.tryin.text": "تجربة مجانية قبل الجليز النهائي للتأكد من المقاس واللون.",
+        "features.courier.title": "خدمة توصيل للعيادات",
+        "features.courier.text": "نستلم الحالة من العيادة ونسلّم التركيبة الجاهزة إليك.",
+        "features.tracking.title": "نظام متابعة للأطباء",
+        "features.tracking.text": "نظام يتيح للطبيب متابعة حالته من الاستلام حتى التسليم.",
+        "features.hours.title": "خدمة 24 ساعة",
+        "features.hours.text": "نعمل على مدار الساعة، بما في ذلك أيام الإجازات.",
+        "services.title": "خدماتنا",
+        "services.subtitle": "حلول متكاملة للتركيبات الثابتة والمتحركة والزراعات.",
+        "services.crowns.title": "تيجان وجسور",
+        "services.crowns.text": "زركونيا وإي ماكس وميتال سيراميك بمظهر طبيعي ومتانة عالية.",
+        "services.crowns.1": "زركونيا فل كونتور",
+        "services.crowns.2": "زركونيا طبقات",
+        "services.crowns.3": "فينير وتيجان إي ماكس",
+        "services.implants.title": "تركيبات الزراعات",
+        "services.implants.text": "دعامات مخصصة وتيجان على الزراعات لأنظمة مختلفة بمقاس دقيق.",
+        "services.implants.1": "دعامات مخصصة",
+        "services.implants.2": "تيجان مثبتة بمسمار",
+        "services.implants.3": "تركيبات متعددة الوحدات",
+        "services.removable.title": "تركيبات متحركة",
+        "services.removable.text": "أطقم جزئية وكاملة بجودة عالية ومقاس مريح وثبات جيد.",
+        "services.removable.1": "أطقم كاملة",
+        "services.removable.2": "أطقم جزئية معدنية",
+        "services.removable.3": "أطقم مرنة",
+        "price.title": "قائمة الأسعار",
+        "price.subtitle": "أسعار واضحة مع جودة وخدمة ثابتتين.",
+        "price.service": "الخدمة",
+        "price.material": "الخامة",
+        "price.amount": "السعر (جنيه)",
+        "price.unit": "للوحدة",
+        "price.chinese": "زركونيا صيني",
+        "price.german": "زركونيا ألماني",
+        "price.emax": "تاج إيماكس",
+        "price.veneer": "فينير",
+        "price.peek": "بيك (شامل الزركونيا)",
+        "price.titanium": "تيتانيوم (شامل الزركونيا)",
+        "price.night": "نايت جارد",
+        "price.mockup": "موك أب",
+        "price.pmma": "PMMA",
+        "price.pmmaCad": "PMMA Cad",
+        "price.note": "* قد تختلف الأسعار حسب صعوبة الحالة. تواصل معنا لعرض سعر تفصيلي.",
+        "locations.title": "فروعنا",
+        "locations.subtitle": "وصول سهل للعيادات والأطباء في المدينة.",
+        "locations.locationLabel": "الموقع:",
+        "locations.locationLink": "📍 الموقع",
+        "locations.phoneLabel": "الهاتف:",
+        "about.title": "عن إليجانس دينتال لاب",
+        "about.p1": "إليجانس دينتال لاب معمل متكامل يقدّم تركيبات ثابتة ومتحركة لعيادات الأسنان. نجمع بين العمل الرقمي وفنيين ذوي خبرة لنتيجة دقيقة وجمالية.",
+        "about.p2": "نركز على جودة ثابتة وتواصل واضح ومواعيد تسليم يمكن الاعتماد عليها لدعم عملك السريري.",
+        "about.1": "أكثر من 25 سنة خبرة",
+        "about.2": "تصميم وخرط رقمي",
+        "about.3": "رقابة جودة على كل حالة",
+        "contact.title": "تواصل معنا",
+        "contact.subtitle": "راسلنا لأي استفسار أو تفاصيل حالة.",
+        "contact.details": "بيانات التواصل",
+        "contact.phone": "الهاتف:",
+        "contact.whatsapp": "واتساب:",
+        "contact.hours": "ساعات العمل:",
+        "contact.hoursValue": "طوال اليوم، 12:00 ص – 12:00 م",
+        "contact.whatsappBtn": "راسلنا على واتساب",
+        "contact.social": "التواصل الاجتماعي",
+        "contact.socialText": "تابعنا لمعرفة الجديد والحالات والخامات.",
+        "contact.facebook": "فيسبوك:",
+        "contact.instagram": "إنستغرام:",
+        "contact.tiktok": "تيك توك:",
+        "footer.rights": "جميع الحقوق محفوظة.",
+        "footer.tagline": "معمل أسنان متخصص للعيادات وأطباء الأسنان."
+      }
+    };
+
+    function setLanguage(lang) {
+      const dict = translations[lang] || translations.en;
+      document.documentElement.lang = lang;
+      document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
+      document.title = dict["meta.title"];
+
+      document.querySelectorAll("[data-i18n]").forEach((el) => {
+        const value = dict[el.getAttribute("data-i18n")];
+        if (value != null) el.textContent = value;
+      });
+
+      document.querySelectorAll("[data-i18n-alt]").forEach((el) => {
+        const value = dict[el.getAttribute("data-i18n-alt")];
+        if (value != null) el.alt = value;
+      });
+
+      document.querySelectorAll("[data-i18n-aria]").forEach((el) => {
+        const value = dict[el.getAttribute("data-i18n-aria")];
+        if (value != null) el.setAttribute("aria-label", value);
+      });
+
+      const langBtn = document.getElementById("lang-switch");
+      if (langBtn) {
+        langBtn.textContent = lang === "ar" ? "English" : "العربية";
+        langBtn.setAttribute("aria-label", lang === "ar" ? "Switch to English" : "التبديل إلى العربية");
+      }
+
+      localStorage.setItem("elegance-lang", lang);
+    }
+
+    const langSwitch = document.getElementById("lang-switch");
+    const savedLang = localStorage.getItem("elegance-lang");
+    setLanguage(savedLang === "ar" ? "ar" : "en");
+
+    if (langSwitch) {
+      langSwitch.addEventListener("click", () => {
+        const next = document.documentElement.lang === "ar" ? "en" : "ar";
+        setLanguage(next);
+      });
+    }
+
     const menuBtn = document.getElementById("menu-btn");
     const navLinks = document.getElementById("nav-links");
 
-    if (menuBtn && navLinks)
-     {
-       menuBtn.addEventListener("click", () => 
-      {
+    if (menuBtn && navLinks) {
+      menuBtn.addEventListener("click", () => {
         navLinks.classList.toggle("navbar__links--open");
       });
 
@@ -398,7 +627,7 @@
           navLinks.classList.remove("navbar__links--open");
         });
       });
-     }
+    }
   </script>
 </body>
 </html>
