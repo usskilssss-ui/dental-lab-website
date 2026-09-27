@@ -34,7 +34,10 @@
       </ul>
 
       <div class="navbar__actions">
-        <button type="button" class="lang-switch" id="lang-switch">العربية</button>
+        <div class="lang-switch" role="group" aria-label="Language">
+          <button type="button" class="lang-switch__btn" data-lang="en">EN</button>
+          <button type="button" class="lang-switch__btn" data-lang="ar">عربي</button>
+        </div>
 
         <!-- Mobile Menu Icon -->
         <button class="menu-btn" id="menu-btn" data-i18n-aria="nav.menu" aria-label="Toggle Menu">
@@ -52,7 +55,7 @@
       <div class="hero__text">
         <h1 data-i18n="hero.title">Premium Dental Lab Solutions for Your Clinic</h1>
         <p data-i18n="hero.subtitle">
-          High-precision crowns, bridges, implants, and removable prosthetics
+          High-precision crowns, bridges, and implants
           with reliable turnaround times and consistent quality.
         </p>
         <div class="hero__actions">
@@ -159,6 +162,18 @@
           <h3 data-i18n="features.hours.title">24/7 Service</h3>
           <p data-i18n="features.hours.text">The lab works around the clock, including holidays.</p>
         </div>
+
+        <div class="card feature-card">
+          <div class="feature-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="8" r="3"/>
+              <path d="M5 19c1.2-2.6 3.4-4 7-4s5.8 1.4 7 4"/>
+              <path d="M19 8v4M17 10h4"/>
+            </svg>
+          </div>
+          <h3 data-i18n="features.portal.title">Doctor Accounts</h3>
+          <p data-i18n="features.portal.text">Each doctor gets an account to see where a case is in the lab, review completed cases, statements, and material counts, and request a courier from the system.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -168,7 +183,7 @@
     <div class="container">
       <div class="section__header">
         <h2 data-i18n="services.title">Our Services</h2>
-        <p data-i18n="services.subtitle">Complete solutions for fixed, removable, and implant dentistry.</p>
+        <p data-i18n="services.subtitle">Complete solutions for fixed and implant dentistry.</p>
       </div>
       <div class="grid grid-3">
         <div class="card service-card">
@@ -305,7 +320,7 @@
           <div class="contact-container">
 
               <p><span data-i18n="locations.locationLabel">Location:</span>
-               <a href="http://maps.app.goo.gl/XGmoxYmLNetBtTCD8" class="location-link" target="_blank">
+               <a href="https://maps.app.goo.gl/Xkdeykda4yHLsCKk6" class="location-link" target="_blank">
                  <span data-i18n="locations.locationLink">📍 Location</span>
                </a>
               </p>
@@ -325,8 +340,8 @@
       <div class="about__text">
         <h2 data-i18n="about.title">About Elegance Dental Lab</h2>
         <p data-i18n="about.p1">
-          Elegance Dental Lab is a full-service laboratory providing fixed and
-          removable restorations for dental clinics. We combine digital
+          Elegance Dental Lab is a full-service laboratory providing fixed
+          restorations for dental clinics. We combine digital
           workflows with experienced technicians to deliver precise and
           aesthetic results.
         </p>
@@ -335,7 +350,7 @@
           reliable turnaround times to support your clinical practice.
         </p>
         <ul class="about__list">
-          <li data-i18n="about.1">More than 25 years of experience</li>
+          <li data-i18n="about.1">More than 12 years of experience</li>
           <li data-i18n="about.2">Digital design & milling</li>
           <li data-i18n="about.3">Strict quality control for every case</li>
         </ul>
@@ -393,7 +408,7 @@
         "nav.menu": "Toggle Menu",
         "logo.alt": "Elegance Dental Lab Logo",
         "hero.title": "Premium Dental Lab Solutions for Your Clinic",
-        "hero.subtitle": "High-precision crowns, bridges, implants, and removable prosthetics with reliable turnaround times and consistent quality.",
+        "hero.subtitle": "High-precision crowns, bridges, and implants with reliable turnaround times and consistent quality.",
         "hero.products": "View Products",
         "hero.contact": "Contact Us",
         "hero.tag1": "Digital Workflow",
@@ -416,8 +431,10 @@
         "features.tracking.text": "A system for doctors to follow each case from receipt through delivery.",
         "features.hours.title": "24/7 Service",
         "features.hours.text": "The lab works around the clock, including holidays.",
+        "features.portal.title": "Doctor Accounts",
+        "features.portal.text": "Each doctor gets an account to see where a case is in the lab, review completed cases, statements, and material counts, and request a courier from the system.",
         "services.title": "Our Services",
-        "services.subtitle": "Complete solutions for fixed, removable, and implant dentistry.",
+        "services.subtitle": "Complete solutions for fixed and implant dentistry.",
         "services.crowns.title": "Crowns & Bridges",
         "services.crowns.text": "Zirconia, E-max, and metal-ceramic restorations with natural aesthetics and strong durability.",
         "services.crowns.1": "Full contour zirconia",
@@ -456,9 +473,9 @@
         "locations.locationLink": "📍 Location",
         "locations.phoneLabel": "Phone:",
         "about.title": "About Elegance Dental Lab",
-        "about.p1": "Elegance Dental Lab is a full-service laboratory providing fixed and removable restorations for dental clinics. We combine digital workflows with experienced technicians to deliver precise and aesthetic results.",
+        "about.p1": "Elegance Dental Lab is a full-service laboratory providing fixed restorations for dental clinics. We combine digital workflows with experienced technicians to deliver precise and aesthetic results.",
         "about.p2": "Our lab focuses on consistent quality, clear communication, and reliable turnaround times to support your clinical practice.",
-        "about.1": "More than 25 years of experience",
+        "about.1": "More than 12 years of experience",
         "about.2": "Digital design & milling",
         "about.3": "Strict quality control for every case",
         "contact.title": "Contact",
@@ -487,7 +504,7 @@
         "nav.menu": "فتح القائمة",
         "logo.alt": "شعار إليجانس دينتال لاب",
         "hero.title": "حلول معمل أسنان متميزة لعيادتك",
-        "hero.subtitle": "تيجان وجسور وزراعات وتركيبات متحركة بدقة عالية، مع جودة ثابتة وتسليم يمكن الاعتماد عليه.",
+        "hero.subtitle": "تيجان وجسور وزراعات بدقة عالية، مع جودة ثابتة وتسليم يمكن الاعتماد عليه.",
         "hero.products": "عرض المنتجات",
         "hero.contact": "تواصل معنا",
         "hero.tag1": "سير عمل رقمي",
@@ -510,8 +527,10 @@
         "features.tracking.text": "نظام يتيح للطبيب متابعة حالته من الاستلام حتى التسليم.",
         "features.hours.title": "خدمة 24 ساعة",
         "features.hours.text": "نعمل على مدار الساعة، بما في ذلك أيام الإجازات.",
+        "features.portal.title": "حسابات الأطباء",
+        "features.portal.text": "ننشئ حسابًا لكل طبيب لمعرفة مكان الحالة داخل المعمل، ومراجعة الحالات التي تم تنفيذها والحسابات وعدد الخامات، وطلب مندوب من النظام.",
         "services.title": "خدماتنا",
-        "services.subtitle": "حلول متكاملة للتركيبات الثابتة والمتحركة والزراعات.",
+        "services.subtitle": "حلول متكاملة للتركيبات الثابتة والزراعات.",
         "services.crowns.title": "تيجان وجسور",
         "services.crowns.text": "زركونيا وإي ماكس وميتال سيراميك بمظهر طبيعي ومتانة عالية.",
         "services.crowns.1": "زركونيا فل كونتور",
@@ -550,9 +569,9 @@
         "locations.locationLink": "📍 الموقع",
         "locations.phoneLabel": "الهاتف:",
         "about.title": "عن إليجانس دينتال لاب",
-        "about.p1": "إليجانس دينتال لاب معمل متكامل يقدّم تركيبات ثابتة ومتحركة لعيادات الأسنان. نجمع بين العمل الرقمي وفنيين ذوي خبرة لنتيجة دقيقة وجمالية.",
+        "about.p1": "إليجانس دينتال لاب معمل متكامل يقدّم تركيبات ثابتة لعيادات الأسنان. نجمع بين العمل الرقمي وفنيين ذوي خبرة لنتيجة دقيقة وجمالية.",
         "about.p2": "نركز على جودة ثابتة وتواصل واضح ومواعيد تسليم يمكن الاعتماد عليها لدعم عملك السريري.",
-        "about.1": "أكثر من 25 سنة خبرة",
+        "about.1": "أكثر من 12 سنة خبرة",
         "about.2": "تصميم وخرط رقمي",
         "about.3": "رقابة جودة على كل حالة",
         "contact.title": "تواصل معنا",
@@ -594,25 +613,21 @@
         if (value != null) el.setAttribute("aria-label", value);
       });
 
-      const langBtn = document.getElementById("lang-switch");
-      if (langBtn) {
-        langBtn.textContent = lang === "ar" ? "English" : "العربية";
-        langBtn.setAttribute("aria-label", lang === "ar" ? "Switch to English" : "التبديل إلى العربية");
-      }
+      document.querySelectorAll(".lang-switch__btn").forEach((btn) => {
+        const active = btn.dataset.lang === lang;
+        btn.classList.toggle("is-active", active);
+        btn.setAttribute("aria-pressed", active ? "true" : "false");
+      });
 
       localStorage.setItem("elegance-lang", lang);
     }
 
-    const langSwitch = document.getElementById("lang-switch");
+    document.querySelectorAll(".lang-switch__btn").forEach((btn) => {
+      btn.addEventListener("click", () => setLanguage(btn.dataset.lang));
+    });
+
     const savedLang = localStorage.getItem("elegance-lang");
     setLanguage(savedLang === "ar" ? "ar" : "en");
-
-    if (langSwitch) {
-      langSwitch.addEventListener("click", () => {
-        const next = document.documentElement.lang === "ar" ? "en" : "ar";
-        setLanguage(next);
-      });
-    }
 
     const menuBtn = document.getElementById("menu-btn");
     const navLinks = document.getElementById("nav-links");
